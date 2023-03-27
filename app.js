@@ -9,7 +9,8 @@ function getWeather(city) {
       .then(response => response.json())
       .then(data => {
         console.log(data);
-        // TODO: Display weather information on the page
+        const temperatureElement = document.getElementById("temperature");
+        temperatureElement.textContent = `${data.main.temp}°C`;
       })
       .catch(error => console.error(error));
 }
