@@ -14,12 +14,12 @@ function getWeather(city) {
       .catch(error => console.error(error));
 }
 
-const submitButton = document.getElementByID("Submit-button");
+const submitButton = document.getElementById("Submit-button");
 
 submitButton.addEventListener("click", () => {
     const inputCity = document.getElementById("input-city");
     const city = inputCity.value;
     getWeather(city);
-  });
+});
 
 
