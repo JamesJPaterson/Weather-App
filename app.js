@@ -14,6 +14,9 @@ function getWeather(city) {
 
         const feelslikeElement = document.getElementById("feels-like");
         feelslikeElement.textContent = `Feels like : ${data.main.feels_like}°C`;
+
+        const humidityElement = document.getElementById("humidity");
+        humidityElement.textContent = `Humidity: ${data.main.humidity}%`;
       })
       .catch(error => console.error(error));
 }
