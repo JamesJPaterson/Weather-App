@@ -11,6 +11,9 @@ function getWeather(city) {
         console.log(data);
         const temperatureElement = document.getElementById("temperature");
         temperatureElement.textContent = `${data.main.temp}°C`;
+
+        const feelslikeElement = document.getElementById("feels-like");
+        feelslikeElement.textContent = `Feels like : ${data.main.feels_like}°C`;
       })
       .catch(error => console.error(error));
 }
