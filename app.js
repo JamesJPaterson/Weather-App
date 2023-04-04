@@ -17,6 +17,9 @@ function getWeather(city) {
 
         const humidityElement = document.getElementById("humidity");
         humidityElement.textContent = `Humidity: ${data.main.humidity}%`;
+
+        const pressureElement = document.getElementById("pressure");
+        pressureElement.textContent = `Pressure: ${data.main.humidity}%`;
       })
       .catch(error => console.error(error));
 }
